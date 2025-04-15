@@ -13,5 +13,6 @@ struct ContentView: View {
             }
         }
         .padding()
+        .edgesIgnoringSafeArea(.top) // Remove header bar
     }
 }

@@ -18,12 +18,14 @@ struct YourProjectApp: App {
             }
         }
     }
+
     func makeWindowTransparent() {
         for window in NSApplication.shared.windows {
             window.isOpaque = false
             window.backgroundColor = .clear
             window.titleVisibility = .hidden
             window.titlebarAppearsTransparent = true
+            // window.styleMask.remove(.titled)
         }
     }
 }

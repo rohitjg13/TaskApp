@@ -9,6 +9,7 @@ struct TaskColumnView: View {
             Text(title)
                 .font(.title2)
                 .bold()
+                .foregroundColor(.primary)
                 .padding(.bottom, 5)
 
             ForEach(tasks) { task in
@@ -18,8 +19,8 @@ struct TaskColumnView: View {
             Spacer()
         }
         .padding()
-        .frame(maxWidth: .infinity)
-        .background(Color.gray.opacity(0.1))
+        .background(.ultraThinMaterial)
         .cornerRadius(16)
+        .shadow(color: .gray.opacity(0.2), radius: 4, x: 0, y: 2)
     }
 }

@@ -8,32 +8,36 @@ struct TaskCardView: View {
             HStack {
                 Text(task.title)
                     .font(.headline)
+                    .foregroundColor(.primary)
                 Spacer()
                 Text(task.category)
                     .font(.caption)
                     .padding(5)
-                    .background(Color.gray.opacity(0.2))
+                    .background(.ultraThinMaterial)
+                    .foregroundColor(.primary)
                     .cornerRadius(8)
             }
 
             Text(task.description)
                 .font(.subheadline)
-                .foregroundColor(.secondary)
+                .foregroundColor(.primary)
 
             HStack {
                 Image(systemName: "person.crop.circle.fill")
+                    .foregroundColor(.primary)
                 Text(task.assignee.name)
                     .font(.caption)
+                    .foregroundColor(.primary)
                 Spacer()
                 if let due = task.dueIn {
                     Text("Due \(due)")
                         .font(.caption2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.primary)
                 }
             }
         }
         .padding()
-        .background(Color.white)
+        .background(.ultraThinMaterial)
         .cornerRadius(12)
         .shadow(radius: 2)
     }
