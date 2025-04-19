@@ -25,6 +25,7 @@ struct YourProjectApp: App {
             window.backgroundColor = .clear
             window.titleVisibility = .hidden
             window.titlebarAppearsTransparent = true
+            window.styleMask.insert(.fullSizeContentView)
             // window.styleMask.remove(.titled)
         }
     }
